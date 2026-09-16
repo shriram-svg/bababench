@@ -1,0 +1,425 @@
+{
+  "source": {
+    "file": "main (27).pdf",
+    "sha256": "4cbbd0ecad53615e0617b30524346a207f3bf7d4ca10d43c632caef766e0d027",
+    "mainTable": 2,
+    "supplementaryTable": 12,
+    "seedTable": 14,
+    "consistencyTable": 15
+  },
+  "worlds": 47,
+  "seeds": 3,
+  "difficulty": {
+    "light": 9,
+    "standard": 15,
+    "hard": 23
+  },
+  "models": [
+    {
+      "id": "claude-opus-5",
+      "model": "Claude Opus 5",
+      "family": "closed",
+      "reasoning": "Max",
+      "passAt1": 52.5,
+      "pass3": 27.7,
+      "light": 74.1,
+      "standard": 75.6,
+      "hard": 29.0,
+      "steps": 70.7,
+      "cost": 5.46,
+      "outcomeRuns": 115,
+      "outcomeCompletion": 81.6,
+      "anySeedWorlds": 35,
+      "anySeed": 74.5,
+      "seeds": [
+        24,
+        26,
+        24
+      ],
+      "consistency": [
+        12,
+        9,
+        13,
+        13
+      ],
+      "shortName": "Opus 5"
+    },
+    {
+      "id": "grok-4-6",
+      "model": "Grok 4.6",
+      "family": "closed",
+      "reasoning": "High",
+      "passAt1": 52.5,
+      "pass3": 38.3,
+      "light": 92.6,
+      "standard": 64.4,
+      "hard": 29.0,
+      "steps": 90.0,
+      "cost": 2.25,
+      "outcomeRuns": 93,
+      "outcomeCompletion": 66.0,
+      "anySeedWorlds": 30,
+      "anySeed": 63.8,
+      "seeds": [
+        27,
+        23,
+        24
+      ],
+      "consistency": [
+        17,
+        4,
+        8,
+        18
+      ],
+      "shortName": "Grok 4.6"
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "model": "GPT-5.6 Sol",
+      "family": "closed",
+      "reasoning": "Max",
+      "passAt1": 49.6,
+      "pass3": 31.9,
+      "light": 81.5,
+      "standard": 66.7,
+      "hard": 26.1,
+      "steps": 78.0,
+      "cost": 3.05,
+      "outcomeRuns": 85,
+      "outcomeCompletion": 60.3,
+      "anySeedWorlds": 30,
+      "anySeed": 63.8,
+      "seeds": [
+        24,
+        24,
+        22
+      ],
+      "consistency": [
+        17,
+        5,
+        10,
+        15
+      ],
+      "shortName": "Sol"
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "model": "GPT-5.6 Terra",
+      "family": "closed",
+      "reasoning": "Max",
+      "passAt1": 46.1,
+      "pass3": 36.2,
+      "light": 77.8,
+      "standard": 57.8,
+      "hard": 26.1,
+      "steps": 69.1,
+      "cost": 1.63,
+      "outcomeRuns": 76,
+      "outcomeCompletion": 53.9,
+      "anySeedWorlds": 28,
+      "anySeed": 59.6,
+      "seeds": [
+        24,
+        20,
+        21
+      ],
+      "consistency": [
+        19,
+        8,
+        3,
+        17
+      ],
+      "shortName": "Terra"
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "model": "GPT-5.6 Luna",
+      "family": "closed",
+      "reasoning": "Max",
+      "passAt1": 36.9,
+      "pass3": 17.0,
+      "light": 63.0,
+      "standard": 46.7,
+      "hard": 20.3,
+      "steps": 62.2,
+      "cost": 0.2,
+      "outcomeRuns": 62,
+      "outcomeCompletion": 44.0,
+      "anySeedWorlds": 26,
+      "anySeed": 55.3,
+      "seeds": [
+        17,
+        16,
+        19
+      ],
+      "consistency": [
+        21,
+        8,
+        10,
+        8
+      ],
+      "shortName": "Luna"
+    },
+    {
+      "id": "gemini-3-7-flash",
+      "model": "Gemini 3.7 Flash",
+      "family": "closed",
+      "reasoning": "High",
+      "passAt1": 29.8,
+      "pass3": 14.9,
+      "light": 40.7,
+      "standard": 42.2,
+      "hard": 17.4,
+      "steps": 46.2,
+      "cost": 1.2,
+      "outcomeRuns": 54,
+      "outcomeCompletion": 38.3,
+      "anySeedWorlds": 20,
+      "anySeed": 42.6,
+      "seeds": [
+        16,
+        14,
+        12
+      ],
+      "consistency": [
+        27,
+        5,
+        8,
+        7
+      ],
+      "shortName": "Gemini Flash"
+    },
+    {
+      "id": "gemini-3-1-pro-preview",
+      "model": "Gemini 3.1 Pro Preview",
+      "family": "closed",
+      "reasoning": "High",
+      "passAt1": 14.2,
+      "pass3": 8.5,
+      "light": 40.7,
+      "standard": 11.1,
+      "hard": 5.8,
+      "steps": 67.1,
+      "cost": 1.65,
+      "outcomeRuns": 41,
+      "outcomeCompletion": 29.1,
+      "anySeedWorlds": 10,
+      "anySeed": 21.3,
+      "seeds": [
+        7,
+        6,
+        7
+      ],
+      "consistency": [
+        37,
+        4,
+        2,
+        4
+      ],
+      "shortName": "Gemini 3.1 Pro"
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "model": "Claude Haiku 4.5",
+      "family": "closed",
+      "reasoning": "Max",
+      "passAt1": 6.4,
+      "pass3": 2.1,
+      "light": 18.5,
+      "standard": 4.4,
+      "hard": 2.9,
+      "steps": 86.7,
+      "cost": 1.12,
+      "outcomeRuns": 19,
+      "outcomeCompletion": 13.5,
+      "anySeedWorlds": 5,
+      "anySeed": 10.6,
+      "seeds": [
+        3,
+        3,
+        3
+      ],
+      "consistency": [
+        42,
+        2,
+        2,
+        1
+      ],
+      "shortName": "Haiku 4.5"
+    },
+    {
+      "id": "inkling",
+      "model": "Inkling",
+      "family": "closed",
+      "reasoning": "Max",
+      "passAt1": 5.7,
+      "pass3": 0.0,
+      "light": 11.1,
+      "standard": 8.9,
+      "hard": 1.4,
+      "steps": 126.7,
+      "cost": 0.91,
+      "outcomeRuns": 11,
+      "outcomeCompletion": 7.8,
+      "anySeedWorlds": 6,
+      "anySeed": 12.8,
+      "seeds": [
+        2,
+        4,
+        2
+      ],
+      "consistency": [
+        41,
+        4,
+        2,
+        0
+      ],
+      "shortName": "Inkling"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "model": "DeepSeek V4 Pro",
+      "family": "open",
+      "reasoning": "Max",
+      "passAt1": 48.9,
+      "pass3": 29.8,
+      "light": 66.7,
+      "standard": 71.1,
+      "hard": 27.5,
+      "steps": 86.0,
+      "cost": 1.44,
+      "outcomeRuns": 88,
+      "outcomeCompletion": 62.4,
+      "anySeedWorlds": 30,
+      "anySeed": 63.8,
+      "seeds": [
+        25,
+        20,
+        24
+      ],
+      "consistency": [
+        17,
+        5,
+        11,
+        14
+      ],
+      "shortName": "DeepSeek V4"
+    },
+    {
+      "id": "meta-musespark-1-2",
+      "model": "Meta MuseSpark 1.2",
+      "family": "open",
+      "reasoning": "High",
+      "passAt1": 44.0,
+      "pass3": 31.9,
+      "light": 74.1,
+      "standard": 57.8,
+      "hard": 23.2,
+      "steps": 96.0,
+      "cost": 0.9,
+      "outcomeRuns": 74,
+      "outcomeCompletion": 52.5,
+      "anySeedWorlds": 28,
+      "anySeed": 59.6,
+      "seeds": [
+        21,
+        18,
+        23
+      ],
+      "consistency": [
+        19,
+        9,
+        4,
+        15
+      ],
+      "shortName": "MuseSpark 1.2"
+    },
+    {
+      "id": "kimi-k3",
+      "model": "Kimi K3",
+      "family": "open",
+      "reasoning": "Max",
+      "passAt1": 36.9,
+      "pass3": 19.1,
+      "light": 59.3,
+      "standard": 44.4,
+      "hard": 23.2,
+      "steps": 64.3,
+      "cost": 2.82,
+      "outcomeRuns": 87,
+      "outcomeCompletion": 61.7,
+      "anySeedWorlds": 29,
+      "anySeed": 61.7,
+      "seeds": [
+        19,
+        14,
+        19
+      ],
+      "consistency": [
+        18,
+        15,
+        5,
+        9
+      ],
+      "shortName": "Kimi K3"
+    },
+    {
+      "id": "glm-5-2",
+      "model": "GLM-5.2",
+      "family": "open",
+      "reasoning": "Max",
+      "passAt1": 32.6,
+      "pass3": 14.9,
+      "light": 59.3,
+      "standard": 40.0,
+      "hard": 17.4,
+      "steps": 64.8,
+      "cost": 1.23,
+      "outcomeRuns": 77,
+      "outcomeCompletion": 54.6,
+      "anySeedWorlds": 24,
+      "anySeed": 51.1,
+      "seeds": [
+        11,
+        18,
+        17
+      ],
+      "consistency": [
+        23,
+        9,
+        8,
+        7
+      ],
+      "shortName": "GLM 5.2"
+    },
+    {
+      "id": "minimax-m3",
+      "model": "MiniMax M3",
+      "family": "open",
+      "reasoning": "Max",
+      "passAt1": 17.0,
+      "pass3": 4.3,
+      "light": 25.9,
+      "standard": 26.7,
+      "hard": 7.2,
+      "steps": 60.1,
+      "cost": 0.29,
+      "outcomeRuns": 39,
+      "outcomeCompletion": 27.7,
+      "anySeedWorlds": 17,
+      "anySeed": 36.2,
+      "seeds": [
+        8,
+        9,
+        7
+      ],
+      "consistency": [
+        30,
+        12,
+        3,
+        2
+      ],
+      "shortName": "MiniMax M3"
+    }
+  ]
+}

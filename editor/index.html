@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>post.md · BabaBench editor</title>
+    <style>
+      :root {
+        --bg: #fff;
+        --panel: #f6f6f7;
+        --line: #e3e4e7;
+        --ink: #111;
+        --muted: #6b6f76;
+        --accent: #1f5eff;
+        --ok: #1f8a4c;
+        --warn: #b4530a;
+        --err: #c0262d;
+        --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        --sans: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0e0f11;
+          --panel: #16181b;
+          --line: #2a2d32;
+          --ink: #ececec;
+          --muted: #9a9ea6;
+          --accent: #6f9bff;
+        }
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: grid;
+        grid-template-rows: 40px 1fr auto;
+        font: 13px/1.4 var(--sans);
+        color: var(--ink);
+        background: var(--bg);
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px;
+        border-bottom: 1px solid var(--line);
+        background: var(--panel);
+      }
+      .bar .file { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+      .bar .file b { color: var(--ink); font-weight: 600; }
+      .bar .status { margin-left: 6px; color: var(--muted); font-variant-numeric: tabular-nums; }
+      .bar .status.ok { color: var(--ok); }
+      .bar .status.warn { color: var(--warn); }
+      .bar .status.err { color: var(--err); }
+      .bar .spacer { flex: 1; }
+      button, .btn {
+        appearance: none;
+        font: inherit;
+        padding: 5px 10px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: var(--bg);
+        color: var(--ink);
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 1.2;
+      }
+      button:hover, .btn:hover { border-color: var(--muted); }
+      button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+      button.primary:disabled { opacity: 0.5; cursor: default; }
+      button:disabled { opacity: 0.5; cursor: default; }
+      kbd { font: 11px var(--mono); opacity: 0.75; margin-left: 4px; }
+
+      .main {
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr);
+        min-height: 0;
+      }
+      body.wide .main { grid-template-columns: 200px minmax(0, 1fr) 0; }
+      body.wide .preview { display: none; }
+
+      .outline {
+        overflow: auto;
+        padding: 10px 6px;
+        border-right: 1px solid var(--line);
+        background: var(--panel);
+      }
+      .outline .label, .preview .label {
+        display: block;
+        padding: 0 6px 6px;
+        font-size: 10.5px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .outline a {
+        display: block;
+        padding: 3px 6px;
+        border-radius: 4px;
+        color: var(--ink);
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .outline a.h3 { padding-left: 16px; color: var(--muted); }
+      .outline a:hover { background: var(--line); }
+      .outline a.active { color: var(--accent); }
+
+      .editor { position: relative; display: flex; flex-direction: column; min-width: 0; }
+      textarea {
+        flex: 1;
+        width: 100%;
+        margin: 0;
+        padding: 18px 22px 40vh;
+        border: 0;
+        outline: none;
+        resize: none;
+        font: 13.5px/1.6 var(--mono);
+        color: var(--ink);
+        background: var(--bg);
+        tab-size: 2;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+      }
+      .banner {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-bottom: 1px solid var(--line);
+        background: #fff4e5;
+        color: #6b3d00;
+        font-size: 12.5px;
+      }
+      .banner.on { display: flex; }
+
+      .preview { display: flex; flex-direction: column; border-left: 1px solid var(--line); min-width: 0; }
+      .preview .head { display: flex; align-items: center; gap: 8px; padding: 8px 10px 4px; }
+      .preview .head .label { padding: 0; flex: 1; }
+      .preview .head button { padding: 2px 8px; font-size: 12px; }
+      iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+
+      .log {
+        display: none;
+        max-height: 30vh;
+        overflow: auto;
+        margin: 0;
+        padding: 10px 14px;
+        border-top: 1px solid var(--line);
+        background: var(--panel);
+        font: 11.5px/1.5 var(--mono);
+        white-space: pre-wrap;
+      }
+      .log.on { display: block; }
+
+      dialog {
+        width: min(720px, 92vw);
+        max-height: 85vh;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      dialog::backdrop { background: rgba(0, 0, 0, 0.35); }
+      dialog .inner { padding: 18px 22px 22px; overflow: auto; max-height: 85vh; }
+      dialog h2 { margin: 0 0 6px; font-size: 15px; }
+      dialog p { margin: 4px 0 10px; color: var(--muted); }
+      dialog table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+      dialog td { padding: 5px 8px 5px 0; border-top: 1px solid var(--line); vertical-align: top; }
+      dialog td:first-child { width: 46%; font-family: var(--mono); font-size: 11.5px; white-space: pre; }
+      dialog .close { float: right; }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <span class="file"><b>post.md</b> <span id="path"></span></span>
+      <span class="status" id="status">Loading…</span>
+      <span class="spacer"></span>
+      <span class="status" id="words"></span>
+      <button id="help">Syntax</button>
+      <button id="wide" title="Hide the preview">Wide</button>
+      <a class="btn" href="/" target="_blank" rel="noreferrer">Open site ↗</a>
+      <button id="build" title="Run pnpm build to refresh dist/">Build site</button>
+      <button id="reload" title="Reload post.md from disk">Reload</button>
+      <button id="save" class="primary" disabled>Save<kbd>⌘S</kbd></button>
+    </div>
+
+    <div class="main">
+      <nav class="outline"><span class="label">Outline</span><div id="outline"></div></nav>
+      <div class="editor">
+        <div class="banner" id="banner">
+          <span>post.md changed on disk while you have unsaved edits.</span>
+          <button id="bannerReload">Discard mine and reload</button>
+          <button id="bannerKeep">Keep mine</button>
+        </div>
+        <textarea id="text" spellcheck="true" autocomplete="off"></textarea>
+      </div>
+      <div class="preview">
+        <div class="head">
+          <span class="label">Preview · updates on save</span>
+          <button id="refresh" title="Reload the preview">Refresh</button>
+        </div>
+        <iframe id="frame" src="/" title="Site preview"></iframe>
+      </div>
+    </div>
+
+    <pre class="log" id="log"></pre>
+
+    <dialog id="helpDialog">
+      <div class="inner">
+        <button class="close" id="helpClose">Close</button>
+        <h2>Writing in post.md</h2>
+        <p>Plain Markdown plus a few blocks the site knows how to render. Save writes the file; the preview updates on its own. <b>Build site</b> regenerates <code>dist/</code> for deployment.</p>
+        <table>
+          <tr><td>## Title {#id}
+### Subtitle {#id}</td><td>Section and sub-section headings. Each <code>##</code> starts a new section and a Contents entry; the <code>{#id}</code> is its link anchor.</td></tr>
+          <tr><td>**bold**  *italic*  `code`</td><td>Inline styles. Use real curly quotes (’ “ ”) and dashes (— –) directly.</td></tr>
+          <tr><td>[text](https://…)</td><td>A link. <code>{{repo}}</code> expands to the GitHub URL, <code>{{case_id}}</code> to the example case ID.</td></tr>
+          <tr><td>&lt;TranslatorFigure /&gt;</td><td>The Luna translator diagram from the paper.</td></tr>
+          <tr><td>[^false-success]</td><td>A citation marker. The id must match an entry in the <code>::: references</code> list at the end.</td></tr>
+          <tr><td>- item
+1. item</td><td>Bullet and numbered lists. Keep each item on one line (or indent continuation lines).</td></tr>
+          <tr><td>&gt; quoted text</td><td>A pull quote.</td></tr>
+          <tr><td>```
+code
+```</td><td>A code block (used for the grading formula and the BibTeX entry).</td></tr>
+          <tr><td>| Col | Col |
+|---|---|
+| a | b |</td><td>A table. Put it inside <code>::: figure label="…"</code> to give it a caption and an accessible label.</td></tr>
+          <tr><td>::: figure
+&lt;DiscoveryMap /&gt;
+
+Caption text.
+:::</td><td>A figure. The last paragraph inside is the caption. Add <code>hero</code> after <code>figure</code> for the wide variant. Standalone components: <code>&lt;Leaderboard /&gt;</code>, <code>&lt;TradeoffChart /&gt;</code>, <code>&lt;OutcomeChart /&gt;</code>, <code>&lt;WorldIndex /&gt;</code>, <code>&lt;DiscoveryMap /&gt;</code>, <code>&lt;Brief /&gt;</code>.</td></tr>
+          <tr><td>::: stages
+1. Name | tag | detail
+:::</td><td>The four-stage overview (numbered automatically).</td></tr>
+          <tr><td>::: witness
+1. tag | text
+:::</td><td>The certified-route trace.</td></tr>
+          <tr><td>::: levers
+- name | party | field | value | note
+
+Proof line.
+:::</td><td>The friction levers; the trailing paragraph is the ✓ proof line.</td></tr>
+          <tr><td>::: note Label
+Body text.
+:::</td><td>The tinted callout (“Results pending”).</td></tr>
+          <tr><td>::: leadList
+- **Lead.** text
+:::</td><td>Styled lists: <code>leadList</code> (intro bullets), <code>workList</code> (required work), <code>gates</code> (numbered QC gates, <code>**Title**</code> then text), <code>pipe</code> (the four pipeline stages).</td></tr>
+          <tr><td>::: walk
+::: step Title | model call
+Body.
+
+```json
+{…}
+```
+
+Note after the code.
+:::
+:::</td><td>The translator walkthrough. Each step is <code>Title | no model</code> or <code>Title | model call</code>; a paragraph after the code block renders as the small note.</td></tr>
+          <tr><td>::: cta
+[Primary](url)
+[Secondary](url)
+:::</td><td>The two call-to-action buttons.</td></tr>
+          <tr><td>::: references
+- [id] Authors | Title | URL | Label | Year
+:::</td><td>The reference list. Margin notes and <code>[^id]</code> markers read from here.</td></tr>
+          <tr><td>---
+title: …
+dek: …
+actions: Label=url; …
+page_title: …
+---</td><td>Front matter at the top: <code>title</code>, <code>dek</code>, <code>byline</code>, <code>org</code>, optional <code>kicker</code>, <code>actions</code> (the header links), <code>page_title</code>, <code>page_description</code>, <code>share_description</code> (browser tab and social cards; take effect on a page reload).</td></tr>
+        </table>
+      </div>
+    </dialog>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const text = $("text"), status = $("status"), words = $("words"), saveBtn = $("save");
+      const outline = $("outline"), frame = $("frame"), log = $("log"), banner = $("banner");
+      let base = 0, dirty = false, diskText = "", savedText = "";
+
+      const setStatus = (msg, cls = "") => { status.textContent = msg; status.className = "status " + cls; };
+      const now = () => new Date().toLocaleTimeString([], { hour12: false });
+      const setDirty = (v) => {
+        dirty = v;
+        saveBtn.disabled = !v;
+        document.title = (v ? "• " : "") + "post.md · BabaBench editor";
+        if (v) setStatus("Unsaved changes", "warn");
+      };
+
+      /* ---- load / save ---- */
+      async function load({ quiet = false } = {}) {
+        const r = await fetch("/__edit/api/post", { cache: "no-store" });
+        const data = await r.json();
+        base = data.mtime; diskText = data.text; savedText = data.text;
+        $("path").textContent = data.file.replace(/^.*\/blog\/site\//, "blog/site/");
+        const { scrollTop, selectionStart, selectionEnd } = text;
+        text.value = data.text;
+        text.scrollTop = scrollTop; text.setSelectionRange(selectionStart, selectionEnd);
+        setDirty(false);
+        if (!quiet) setStatus("Loaded " + now(), "ok");
+        render();
+      }
+
+      async function save() {
+        if (!dirty) return;
+        setStatus("Saving…");
+        const r = await fetch("/__edit/api/post", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: text.value, base }),
+        });
+        const data = await r.json();
+        if (r.status === 409) {
+          base = data.mtime; diskText = data.text;
+          setStatus("Conflict: post.md changed on disk", "err");
+          banner.classList.add("on");
+          return;
+        }
+        if (!r.ok) { setStatus("Save failed: " + (data.error || r.status), "err"); return; }
+        base = data.mtime; diskText = text.value; savedText = text.value;
+        setDirty(false);
+        setStatus("Saved " + now(), "ok");
+      }
+
+      /* ---- outline ---- */
+      function render() {
+        const lines = text.value.split("\n");
+        const frag = document.createDocumentFragment();
+        lines.forEach((line, i) => {
+          const m = line.match(/^(#{2,3})\s+(.*?)(?:\s*\{#[\w-]+\})?\s*$/);
+          if (!m) return;
+          const a = document.createElement("a");
+          a.href = "#"; a.textContent = m[2]; a.dataset.line = i;
+          a.className = m[1].length === 3 ? "h3" : "h2";
+          a.onclick = (e) => { e.preventDefault(); jumpTo(i); };
+          frag.appendChild(a);
+        });
+        outline.replaceChildren(frag);
+        const n = text.value.trim().split(/\s+/).filter(Boolean).length;
+        words.textContent = n.toLocaleString() + " words";
+      }
+
+      // Go to a line: force a scroll, then let the browser bring the caret into
+      // view (Chrome centers it). Textarea layout cannot be measured reliably
+      // from outside, so the browser's own caret scrolling is the ground truth.
+      function jumpTo(line) {
+        const lines = text.value.split("\n");
+        const pos = lines.slice(0, line).join("\n").length + (line ? 1 : 0);
+        text.blur();
+        text.scrollTop = pos < text.value.length / 2 ? text.scrollHeight : 0;
+        text.setSelectionRange(pos, pos);
+        text.focus();
+        highlight(line);
+      }
+
+      function highlight(line) {
+        let best = null;
+        for (const a of outline.children) if (+a.dataset.line <= line) best = a;
+        for (const a of outline.children) a.classList.toggle("active", a === best);
+      }
+
+      function currentLine() {
+        return text.value.slice(0, text.selectionStart).split("\n").length - 1;
+      }
+
+      /* ---- build ---- */
+      async function build() {
+        const btn = $("build");
+        btn.disabled = true; btn.textContent = "Building…";
+        log.classList.add("on"); log.textContent = "pnpm build …";
+        setStatus("Building dist/…");
+        try {
+          if (dirty) await save();
+          const r = await fetch("/__edit/api/build", { method: "POST" });
+          const data = await r.json();
+          log.textContent = data.output || "(no output)";
+          log.scrollTop = log.scrollHeight;
+          setStatus(data.ok ? "Built dist/ " + now() : "Build failed — see log", data.ok ? "ok" : "err");
+        } catch (e) {
+          log.textContent = String(e); setStatus("Build failed", "err");
+        } finally {
+          btn.disabled = false; btn.textContent = "Build site";
+        }
+      }
+
+      /* ---- disk watch: pick up edits made in another editor ---- */
+      setInterval(async () => {
+        try {
+          const r = await fetch("/__edit/api/post", { cache: "no-store" });
+          const data = await r.json();
+          if (Math.abs(data.mtime - base) < 0.5) return;
+          if (!dirty || text.value === data.text) { await load({ quiet: true }); setStatus("Reloaded from disk " + now(), "ok"); return; }
+          base = data.mtime; diskText = data.text;
+          banner.classList.add("on");
+        } catch {}
+      }, 4000);
+
+      $("bannerReload").onclick = () => { banner.classList.remove("on"); load(); };
+      $("bannerKeep").onclick = () => { banner.classList.remove("on"); setDirty(true); };
+
+      /* ---- wiring ---- */
+      let renderTimer = 0;
+      text.addEventListener("input", () => {
+        setDirty(text.value !== savedText);
+        clearTimeout(renderTimer); renderTimer = setTimeout(render, 200);
+      });
+      text.addEventListener("keydown", (e) => {
+        if (e.key === "Tab") {
+          e.preventDefault();
+          const { selectionStart: s, selectionEnd: t } = text;
+          text.setRangeText("  ", s, t, "end");
+          text.dispatchEvent(new Event("input"));
+        }
+      });
+      ["keyup", "click"].forEach((ev) => text.addEventListener(ev, () => highlight(currentLine())));
+      document.addEventListener("keydown", (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "s") { e.preventDefault(); save(); }
+      });
+      window.addEventListener("beforeunload", (e) => { if (dirty) { e.preventDefault(); e.returnValue = ""; } });
+      saveBtn.onclick = save;
+      $("reload").onclick = () => { if (!dirty || confirm("Discard unsaved changes and reload from disk?")) load(); };
+      $("build").onclick = build;
+      $("refresh").onclick = () => { frame.src = frame.src; };
+      $("wide").onclick = () => {
+        const wide = document.body.classList.toggle("wide");
+        $("wide").textContent = wide ? "Preview" : "Wide";
+      };
+      $("help").onclick = () => $("helpDialog").showModal();
+      $("helpClose").onclick = () => $("helpDialog").close();
+
+      load();
+    </script>
+  </body>
+</html>

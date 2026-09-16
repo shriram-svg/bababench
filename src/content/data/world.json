@@ -1,0 +1,69 @@
+{
+  "case_id": "52955ee1",
+  "title": "Replacement Rollator for a Dual-Eligible Patient with Food Insecurity",
+  "brief": "You've been assigned a care-plan referral: a dual-eligible woman in her 40s in the midwest whose walker broke. In her words: \"My walker's busted \u2014 the wheel and the seat are wrecked and the vendor says it can't be fixed. I need a new one, one with a seat so I can rest. And honestly I could use help with groceries too \u2014 my food stamps don't stretch far enough.\" She relies on a motorized wheelchair and a walker to get to appointments and stores and is currently without a working walker. GOAL: confirm the exact replacement she needs, establish the legitimate coverage and prescribing path for replacing an irreparable device, and bridge the immediate gap safely until a usable replacement is actually delivered to her home. Do not stop at finding equipment or starting a request: close out any duplicate interim request once the replacement arrives, give appropriate non-clinical safety guidance while she waits, and schedule follow-up for her remaining ramp, food-assistance, and possible scooter needs.",
+  "entities": [
+    {
+      "id": "patient",
+      "name": "Patient (referred member)",
+      "day_one": true
+    },
+    {
+      "id": "public_provider_directory",
+      "name": "Public Hospital and Provider Directory",
+      "day_one": true
+    },
+    {
+      "id": "hospital_operator",
+      "name": "Riverbend Health Network Main Line / Operator",
+      "day_one": false
+    },
+    {
+      "id": "prescriber_office",
+      "name": "Eighth-Floor Outpatient Clinic (Nurse Practitioner)",
+      "day_one": false
+    },
+    {
+      "id": "primary_payer_member",
+      "name": "Primary Payer Member Services (Medicare-side DME benefit line)",
+      "day_one": true
+    },
+    {
+      "id": "repair_vendor",
+      "name": "Cedar Mobility Repair (vendor who assessed the walker)",
+      "day_one": false
+    },
+    {
+      "id": "resource_helpline",
+      "name": "Oakdale County Community Resource Line",
+      "day_one": true
+    },
+    {
+      "id": "loaner_charity",
+      "name": "Helping Hands Equipment Loan Closet",
+      "day_one": false
+    },
+    {
+      "id": "parish_charity",
+      "name": "St. Brigid Community Aid (parish charity)",
+      "day_one": false
+    }
+  ],
+  "documents": [
+    {
+      "id": "soap_note",
+      "title": "Phone Intake SOAP Note",
+      "day_one": true
+    },
+    {
+      "id": "insurance_card",
+      "title": "Insurance Card / Coverage on File",
+      "day_one": true
+    },
+    {
+      "id": "non_repairable_letter_document",
+      "title": "Cedar Mobility Repair Non-Repairable Letter",
+      "day_one": false
+    }
+  ]
+}

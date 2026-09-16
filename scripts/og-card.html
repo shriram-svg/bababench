@@ -1,0 +1,43 @@
+<!doctype html>
+<!--
+  Source for public/og-card.png. To regenerate: run `pnpm dev`, open
+  /scripts/og-card.html, and screenshot the 1200x630 body.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/node_modules/@fontsource-variable/geist/index.css" />
+    <style>
+      * { margin: 0; box-sizing: border-box; }
+      body {
+        width: 1200px; height: 630px; display: flex; flex-direction: column;
+        justify-content: space-between; padding: 76px 80px 68px;
+        background: #ffffff; color: #17181a;
+        font-family: "Geist Variable", system-ui, sans-serif;
+        font-feature-settings: "cv11", "ss01";
+        -webkit-font-smoothing: antialiased;
+      }
+      .brand { display: flex; align-items: center; gap: 14px; color: #6e7076; font-size: 24px; }
+      .brand img { width: 84px; }
+      .brand span { padding-left: 14px; border-left: 1px solid #e8e8e6; }
+      h1 { font-size: 82px; font-weight: 680; letter-spacing: -0.03em; line-height: 1.02; }
+      p { margin-top: 26px; max-width: 900px; color: #36383b; font-size: 32px; line-height: 1.35; }
+      .facts { display: flex; gap: 46px; color: #6e7076; font-size: 23px; }
+      .facts b { color: #2050e0; font-weight: 660; }
+      .rule { height: 5px; width: 118px; border-radius: 3px; background: #2050e0; margin-bottom: 30px; }
+    </style>
+  </head>
+  <body>
+    <div class="brand"><img src="/favicon.svg" alt="" /><span>Baba Research</span></div>
+    <div>
+      <div class="rule"></div>
+      <h1>BabaBench</h1>
+      <p>A benchmark for whether AI agents can navigate the healthcare system on a patient&rsquo;s behalf</p>
+    </div>
+    <div class="facts">
+      <span><b>47</b> simulated cases</span>
+      <span><b>14</b> models evaluated</span>
+      <span><b>3</b> seeds per model</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,491 @@
+[
+  {
+    "case_id": "afa28f59",
+    "title": "Backup Non-Emergency Transportation for a Post-Surgical Medicare Patient",
+    "brief": "Patient Marguerite Delacroix, a woman in her 60s in Texas recovering from recent foot surgery, has Medicare and is currently relying on family (her niece) for rides to her medical appointments. In her words: 'I can't drive right now and I hate leaning on my niece for every appointment \u2014 I'd like a dependable backup for getting where I need to go while I recover.'",
+    "parties": 9,
+    "contacts": [
+      "Marguerite Delacroix",
+      "Texas Medicare Member Services Line",
+      "Community Resource Directory (online lookup)"
+    ]
+  },
+  {
+    "case_id": "36eda949",
+    "title": "Bladder-Surgery Recovery Planning & Medication Access Check",
+    "brief": "Your patient is a woman in her 70s living alone in the western US on a fixed Social Security income, already receiving help with food and grocery assistance. She reports an upcoming bladder surgery for a bladder mass and is feeling overwhelmed by the practical demands around it.",
+    "parties": 5,
+    "contacts": [
+      "Rosa M.",
+      "Silver Sage Aging & Community Services Line"
+    ]
+  },
+  {
+    "case_id": "34aa5418",
+    "title": "Blood-Clot Follow-Up Confirmation (caregiver-gated)",
+    "brief": "Miguel Delgado is a man in his 50s in California, dual-eligible for Medicare and Medicaid, with a history of blood clots, spinal cord injury, diabetes, and cane-assisted mobility. His spouse and IHSS caregiver, Rosa, is the reliable point of contact.",
+    "parties": 2,
+    "contacts": [
+      "Rosa Delgado"
+    ]
+  },
+  {
+    "case_id": "80582584",
+    "title": "Caregiver hand-off and PCP visit coordination for a Medicare Advantage member",
+    "brief": "You are picking up this Medicare Advantage member's case after intake, working initially through her caregiver (son/son-in-law) before transitioning to direct patient contact.",
+    "parties": 8,
+    "contacts": [
+      "Son-in-law / family caregiver",
+      "Meridian Care Advocacy"
+    ]
+  },
+  {
+    "case_id": "08397c4a",
+    "title": "Confirm Original-Medicare Coverage Before Any DME/Transport Work",
+    "brief": "You are coordinating care for an 80\u201389 year-old woman in California whose plan type is uncertain.",
+    "parties": 6,
+    "contacts": [
+      "The patient (Ms. R.)"
+    ]
+  },
+  {
+    "case_id": "8ac76997",
+    "title": "Confirming Care Team & Scheduling a Primary-Care Referral Visit for a Dual-Eligible Patient",
+    "brief": "You are supporting a dual-eligible woman in her 60s in California who is receiving care coordination services. Her top priority is obtaining a motorized mobility scooter for community mobility, limited by asthma/COPD and old work-related knee and back injuries.",
+    "parties": 8,
+    "contacts": [
+      "Marguerite Delacroix",
+      "Golden State Dual Advantage \u2014 Member Services / Find-a-Doctor",
+      "Oakhaven Community Senior Center"
+    ]
+  },
+  {
+    "case_id": "62b37502",
+    "title": "Confirming an Elderly Medicare Patient's Exact Plan Structure",
+    "brief": "Your patient is a woman in her 70s in California who is on Medicare, but her exact plan structure hasn't been pinned down yet. You're working with the patient and her daughter; the daughter is the main point of contact and holds all the insurance cards, but she is not documented as the patient's legal proxy.",
+    "parties": 9,
+    "contacts": [
+      "Patient's daughter (caregiver and primary contact)",
+      "Patient / Medicare beneficiary",
+      "Medicare beneficiary/provider line",
+      "Oakdale County Aging & Elder Services line",
+      "Advocacy case-file system"
+    ]
+  },
+  {
+    "case_id": "0f89d9ad",
+    "title": "Confirming the PCP and Scheduling the Mobility Evaluation for a Power Scooter",
+    "brief": "Your patient is a woman in her 60s in Ohio with Medicare coverage who needs a mobility scooter. She is temporarily hospitalized after an acute cardiac event and is not currently available for substantive consent or scheduling.",
+    "parties": 6,
+    "contacts": [
+      "Patient (on file)"
+    ]
+  },
+  {
+    "case_id": "7ffc1903",
+    "title": "Cyclobenzaprine supply-gap flag \u2014 confirm and close",
+    "brief": "Patient is a man in his 50s in California with active Medicare pharmacy coverage. His care plan has an open cyclobenzaprine gap based on an earlier report that he could not obtain or take the medication.",
+    "parties": 5,
+    "contacts": [
+      "Patient (on file)",
+      "Advocate Care Management Platform"
+    ]
+  },
+  {
+    "case_id": "389e31d7",
+    "title": "D-SNP Colostomy Supply Continuity Check",
+    "brief": "You are a care advocate following up with a woman in her 70s in Pennsylvania who is dual-eligible and enrolled in a Medicare Advantage Dual Care (HMO D-SNP) plan. She was referred to you after a phone intake where her main concern was breathing trouble from COPD and asthma.",
+    "parties": 7,
+    "contacts": [
+      "Patient (Ms. N.)",
+      "Meridian Care Advocacy",
+      "Keystone Advantra Dual Care Member Services"
+    ]
+  },
+  {
+    "case_id": "62ab1477",
+    "title": "Dialysis Transportation & Dual-Eligibility Navigation",
+    "brief": "You're advocating for a woman in her 50s in the Midwest with end-stage renal disease on in-center dialysis about 12 miles from home and heart failure. She reports Traditional Medicare with Part D, but unreliable transportation is causing missed dialysis sessions and her Medicaid and newer plan information are unclear.",
+    "parties": 7,
+    "contacts": [
+      "Monelle Carver",
+      "State Health & Family Services Medicaid Line",
+      "Medicare Member Services"
+    ]
+  },
+  {
+    "case_id": "0177fac5",
+    "title": "Dual-Eligible DME Mobility Groundwork",
+    "brief": "Marcus, a man in his 50s in California who is dual-eligible (federal Medicare plus state Medicaid), was assigned a healthcare advocate after an intake call. In his own words: 'My back is a mess \u2014 scoliosis and everything \u2014 I can only walk about 15 to 20 yards before I start losing my balance.",
+    "parties": 10,
+    "contacts": [
+      "Marcus (the patient)",
+      "Medicare Beneficiary Verification Line",
+      "County DME Supplier Lookup Line"
+    ]
+  },
+  {
+    "case_id": "ed573446",
+    "title": "Dual-Eligible Dementia Patient: Caregiver Intake, Authorization, and Care Coordination",
+    "brief": "You are handling a care coordination intake for the documented health-care agent of a 90+ year-old dual-eligible patient with dementia and hypertension. The case record contains a verified health-care power of attorney naming the grandson as the patient's legal personal representative for this coordination.",
+    "parties": 10,
+    "contacts": [
+      "Patient's caregiver (grandson)",
+      "Care Resource Directory"
+    ]
+  },
+  {
+    "case_id": "7c7d961d",
+    "title": "Electric Scooter DME Authorization for a Medicare Patient",
+    "brief": "You are assisting a male patient in a small Texas city who is seeking an electric scooter for outdoor mobility because hip arthritis, a bulging disc, and neuropathy limit his walking. His insurance is on file, but the benefit has not yet been verified, and he reports an established primary care clinician.",
+    "parties": 7,
+    "contacts": [
+      "Patient (intake caller)",
+      "South Central Advantage Care Plan \u2014 Member Services"
+    ]
+  },
+  {
+    "case_id": "cf83d90f",
+    "title": "Enrolling a Rehab-Discharged Medicare Advantage Member with an In-Network PCP",
+    "brief": "You're helping a Medicare Advantage member (a woman in her 70s in the Midwest, recently discharged from inpatient rehab with significant mobility limitations) find and establish care with an in-network primary care physician in her area who is accepting new patients, determine whether her plan requires a separate PCP assignment, and schedule her initial appointment.",
+    "parties": 6,
+    "contacts": [
+      "Della Hartwell"
+    ]
+  },
+  {
+    "case_id": "260a783d",
+    "title": "Food Access Bridge for a Homebound Senior in Texas",
+    "brief": "You are the healthcare advocate coordinating care for an 80-89 year old male Medicare patient in Texas whose care plan flags food access as the primary concern.",
+    "parties": 9,
+    "contacts": [
+      "The Patient",
+      "Brazos Regional Food Bank Network",
+      "Church-Based & Community Pantries",
+      "Oakdale County Home Meals Delivery",
+      "Texas Statewide Resource & Referral Line (2-1-1)",
+      "State Food Benefits (SNAP / Lone Star Card) Application Portal"
+    ]
+  },
+  {
+    "case_id": "af78816a",
+    "title": "Food security for a homebound Medicare Advantage member with stolen SNAP benefits",
+    "brief": "Your patient is a woman in her 60s in New York on a Medicare Advantage plan, living with her adult daughter, whose intake surfaced food insecurity among several needs. She uses a walker, does not drive, and has limited transportation.",
+    "parties": 7,
+    "contacts": [
+      "The patient",
+      "Westvale County Office for the Aging",
+      "Westvale County Department of Social Services"
+    ]
+  },
+  {
+    "case_id": "a07f01b2",
+    "title": "Food-Insecurity Resource Navigation for a Mobility-Limited Under-60 Patient",
+    "brief": "You're advocating for Robert Hale, 54, Bracken County, TX, Medicare Advantage PPO, referred for financial barriers and end-of-month food insecurity. In his words: \"By the end of the month I run short on food, and I can't get around well enough to go pick things up \u2014 is there help I qualify for?\" His identity is on file.",
+    "parties": 10,
+    "contacts": [
+      "Robert Hale",
+      "Bracken Regional Community Resource Line"
+    ]
+  },
+  {
+    "case_id": "83ee1adf",
+    "title": "Four-Wheel Scooter DME Prescription Pathway for a Dual-Eligible Patient",
+    "brief": "You're coordinating care for a dual-eligible woman in her 70s in the Midwest who urgently needs a four-wheel motorized scooter. Her hip replacement did not heal properly, she's had a subsequent fall, and the unstable three-wheeled scooter she currently uses has thrown her twice.",
+    "parties": 7,
+    "contacts": [
+      "Ms. Marlene Ostrander",
+      "Advocate's own organization (records/fax desk)"
+    ]
+  },
+  {
+    "case_id": "0614efce",
+    "title": "Grab Bar Installation Follow-Up \u2014 Fall Prevention Home Safety",
+    "brief": "You're following up with a dual-eligible male patient in California who previously reached out to a fall prevention program about getting a grab bar installed in his home. He also has ongoing needs around transportation and food access, which are part of his broader picture but not the focus of this task.",
+    "parties": 7,
+    "contacts": [
+      "The patient",
+      "Westvale County Community Aging Services (Area Agency on Aging)"
+    ]
+  },
+  {
+    "case_id": "004275af",
+    "title": "Ibuprofen Medication-Safety Clarification for a Dual-Eligible Patient",
+    "brief": "You've picked up a care-advocacy case handed off from intake. The patient is a dual-eligible (Medicare/Medicaid) woman in California, enrolled after a phone intake visit. She self-reports diabetes, hypertension, diabetic nerve pain, anxiety, and heart failure, and her intake medication list includes Ibuprofen 800 mg three times daily.",
+    "parties": 5,
+    "contacts": [
+      "Patient (on file)"
+    ]
+  },
+  {
+    "case_id": "801ab8cb",
+    "title": "Medicare Advantage NEMT activation and meal-delivery recovery",
+    "brief": "Telehealth advocacy intake for a male Medicare Advantage member in his 60s in Texas, flagged for transportation and food insecurity among other social needs. In his words: \"I've got one leg, and I end up paying for a taxi once or twice a month just to get around.\"",
+    "parties": 7,
+    "contacts": [
+      "Mr. R. (member)",
+      "Lone Star Advantage Complete (MA plan) \u2014 Member Services",
+      "Oakdale County Community Resource Line"
+    ]
+  },
+  {
+    "case_id": "657494da",
+    "title": "Medicare Scooter \u2014 Finding an Assignment-Accepting DME Supplier",
+    "brief": "Margaret is a Texas woman in her 60s with Original Medicare, recovering from foot surgery for rheumatoid-arthritis toe deformities. On the Day 4 care-plan call she said her main need is \"a lightweight, portable electric scooter I can load into the car with my husband's help,\" and she gave her insurance information and her primary care physician's contact.",
+    "parties": 9,
+    "contacts": [
+      "Margaret Alcott",
+      "Medicare DME Supplier Directory Line",
+      "Original Medicare Member Services (Part B benefits line)"
+    ]
+  },
+  {
+    "case_id": "7d173350",
+    "title": "Medication Access \u2014 Pending Pharmacy Pickup for a Dual-Eligible Patient",
+    "brief": "You are picking up this case for a dual-eligible woman with multiple chronic conditions (hypertension, diabetes, COPD, asthma, PAD, post-surgical bilateral carpal tunnel, spinal arthritis). Intake reported that maintenance medications had been left at her pharmacy, but it did not establish their current pickup status or the actual reason access broke down.",
+    "parties": 6,
+    "contacts": [
+      "Patient (Marlene D.)"
+    ]
+  },
+  {
+    "case_id": "0df7ca56",
+    "title": "Medication List Reconciliation & Pharmacy Transfer for a Dual-Eligible Elder",
+    "brief": "Intake referral: a 90+ year-old male with dementia and hypertension, dual-eligible for Medicare and California Medicaid. His family caregiver is the primary contact and says: \"I need help getting his medicines straightened out \u2014 he's on Trazodone 50 and Amlodipine 10, and there are two newer ones, one for allergies and one for constipation, but I don't have those names in front of me.\"",
+    "parties": 6,
+    "contacts": [
+      "Patient's Caregiver (family member)",
+      "Meadowlark Home Delivery Pharmacy"
+    ]
+  },
+  {
+    "case_id": "2fe553eb",
+    "title": "Medication Safety Flag: Concurrent NSAID + Diuretic in Heart Failure",
+    "brief": "You've been assigned as care advocate for a dual-eligible (Medicare/Medi-Cal) woman in her 50s in California with active heart failure, diabetes, hypertension, diabetic nerve pain, and anxiety. At her care-coordination intake she said her main need was 'I just want an electric scooter so I can get around' (mobility equipment \u2014 being handled separately).",
+    "parties": 2,
+    "contacts": [
+      "Marisol Herrera"
+    ]
+  },
+  {
+    "case_id": "81390c9f",
+    "title": "Mobility DME plan: confirm care team, coverage, supplier, and the evaluation pathway",
+    "brief": "You are assisting a male patient in his 40s in the western US who is paralyzed from the waist down and has high blood pressure, enrolled in a Medicare Advantage plan. He has asked for help getting a new manual wheelchair or an electric/power scooter to improve his mobility.",
+    "parties": 7,
+    "contacts": [
+      "Marcus Delgado",
+      "Summit Advantage Gold Member Services"
+    ]
+  },
+  {
+    "case_id": "3b5b952c",
+    "title": "NEMT enrollment for a home-bound dual-eligible patient",
+    "brief": "Patient is a man in his 70s with Medicare and Medicaid, a cardiovascular condition, and profound mobility limitations. He reports not leaving his apartment for years, cannot reach the bus stop, and has no transportation, family, or social support.",
+    "parties": 9,
+    "contacts": [
+      "Advocacy Intake / Referral Record",
+      "Harold Winters"
+    ]
+  },
+  {
+    "case_id": "8e11c075",
+    "title": "Ohio Medicaid Mobility Scooter Request",
+    "brief": "You're taking on a new client, a man in his 60s on Ohio Medicaid. From intake you have his name, date of birth, and Medicaid plan/member ID. He's told you his main interest is 'getting a mobility scooter' and wants you to work with his primary care office on the paperwork.",
+    "parties": 7,
+    "contacts": [
+      "Advocacy Care Management Intake",
+      "Gerald M. (patient)",
+      "Ohio Medicaid DME Provider Locator Line"
+    ]
+  },
+  {
+    "case_id": "1fca016c",
+    "title": "Perioperative Care Coordination for a Dual-Eligible Hip Surgery Patient",
+    "brief": "You're supporting a dual-eligible man in his 70s in California who is preparing for a scheduled hip surgery. He has arthritis, a cardiac condition managed with Carvedilol, and schizophrenia; he has an attendant but manages most daily activities himself.",
+    "parties": 9,
+    "contacts": [
+      "Raymond Okafor (patient)",
+      "Meridian Care Advocacy"
+    ]
+  },
+  {
+    "case_id": "5f677779",
+    "title": "Pharmacy access and home delivery for a dual-eligible elder with dementia",
+    "brief": "You're assisting a caregiver (grandson) who is advocating for his 90+ year-old grandfather, a dual-eligible (Medicaid/Medicare Part D) patient with dementia and hypertension. The family has been struggling to obtain his medications from the pharmacy, but intake did not establish whether the real barrier is cost, coverage, prescription status, delivery, or physical access.",
+    "parties": 8,
+    "contacts": [
+      "Grandson / caregiver",
+      "In-Network Pharmacy Locator (public plan directory line)"
+    ]
+  },
+  {
+    "case_id": "9cc0980f",
+    "title": "Plastic surgery consultation: confirm referral and schedule",
+    "brief": "Your patient is a dual-eligible man in his 60s in Illinois whose primary care provider referred him to a plastic surgeon for a skin-removal procedure. After losing roughly 193 pounds, he has painful redundant skin that is limiting his mobility, and he needs to move forward with the surgical consultation.",
+    "parties": 5,
+    "contacts": [
+      "Raymond Keller",
+      "Rock River Family Medicine (referring PCP office)",
+      "Sierra Health Partners member services"
+    ]
+  },
+  {
+    "case_id": "3ed6af65",
+    "title": "Post-Discharge Records & Medication Continuity Coordination",
+    "brief": "You're supporting a Medicare patient in his 70s after a recent hospitalization for breathing difficulty and a cardiac event requiring coronary stents. His spouse is involved in his care.",
+    "parties": 6,
+    "contacts": [
+      "Walter Renquist"
+    ]
+  },
+  {
+    "case_id": "90f99701",
+    "title": "Post-Hospitalization Primary Care Follow-Up and Discharge Records Confirmation",
+    "brief": "Harold, a man in his 70s on Medicare (Original Parts A & B), was recently hospitalized in the western US for breathing difficulty and had 3 coronary stents placed with 2 more pending. He recently relocated and is re-establishing care locally.",
+    "parties": 5,
+    "contacts": [
+      "Harold Whitfield (patient)"
+    ]
+  },
+  {
+    "case_id": "2d630ac9",
+    "title": "Post-Surgical Nutrition Support for a Fixed-Income Medicaid Patient",
+    "brief": "You're assisting a man in his 60s in Ohio who is on Medicaid, living on a fixed income, and currently recovering from surgery. He needs help getting adequate nutrition while he heals, but he's difficult to reach by phone.",
+    "parties": 9,
+    "contacts": [
+      "Raymond Doyle",
+      "Hartwell County Aging & Community Resource Line"
+    ]
+  },
+  {
+    "case_id": "9e59e0ff",
+    "title": "Post-op mobility device for a dual-eligible patient before hip surgery",
+    "brief": "You are coordinating mobility equipment ahead of hip surgery for a dual-eligible senior with arthritis, a cardiac condition, and schizophrenia. He has asked for an electric scooter or wheelchair, is unsure of the exact surgery date, and reports having an attendant.",
+    "parties": 6,
+    "contacts": [
+      "Harold Grant",
+      "California Dual Plan Supplier Directory"
+    ]
+  },
+  {
+    "case_id": "0b54c25c",
+    "title": "Power Scooter DME Navigation \u2014 Coverage, Supplier, and Clinic Referral",
+    "brief": "You're assisting a patient in his 40s living in the Fort Collins, CO region who is paralyzed from the waist down and has high blood pressure managed with amlodipine, and is also on Suboxone.",
+    "parties": 8,
+    "contacts": [
+      "Darnell Rivas",
+      "Summit Ridge Provider & DME Directory Line"
+    ]
+  },
+  {
+    "case_id": "9951afcd",
+    "title": "Powered Scooter Prior Authorization Initiation \u2014 Medicare Advantage (TX)",
+    "brief": "Your patient is a woman in her 50s in Texas with Medicare Advantage coverage, diabetes, and residual weakness and severe drop foot after a stroke. She reports recurrent falls and wants a powered electric scooter so she can move safely in the community and join her grandchildren's activities.",
+    "parties": 8,
+    "contacts": [
+      "Renata Alvarez",
+      "Lone Star Advantage \u2014 Member Services / DME line"
+    ]
+  },
+  {
+    "case_id": "8cc91e7c",
+    "title": "Re-establishing an in-home primary care provider for a homebound dual-eligible man",
+    "brief": "You're assisting a man in his 70s with Medicare and Medicaid, cardiovascular disease, and severe mobility limitations that make leaving home very difficult. He has no transportation or regular support and is wary of doctors and medications after a past authorization mix-up led to a severe reaction and hospitalization.",
+    "parties": 6,
+    "contacts": [
+      "Walter K. (patient)",
+      "Traditional Medicare Member Services Line"
+    ]
+  },
+  {
+    "case_id": "768393a8",
+    "title": "Reconciling a Medicare Advantage Coverage Discrepancy Before DME Navigation",
+    "brief": "You're assisting a woman in her 40s from the western US who needs mobility equipment. She reports Medicare Advantage coverage, but the insurance organization in her file does not match the payer she identifies, so DME and benefit navigation should not proceed yet.",
+    "parties": 7,
+    "contacts": [
+      "Patient (established, on file)",
+      "Advocacy Care Management System (insurance tab)"
+    ]
+  },
+  {
+    "case_id": "52955ee1",
+    "title": "Replacement Rollator for a Dual-Eligible Patient with Food Insecurity",
+    "brief": "You've been assigned a care-plan referral: a dual-eligible woman in her 40s in the midwest whose walker broke. In her words: \"My walker's busted \u2014 the wheel and the seat are wrecked and the vendor says it can't be fixed.\"",
+    "parties": 9,
+    "contacts": [
+      "Patient (referred member)",
+      "Public Hospital and Provider Directory",
+      "Primary Payer Member Services (Medicare-side DME benefit line)",
+      "Oakdale County Community Resource Line"
+    ]
+  },
+  {
+    "case_id": "600f4ec1",
+    "title": "Respiratory follow-up and inhaler regimen coordination for a dual-eligible scooter-seeking patient",
+    "brief": "You are supporting a dual-eligible woman in her 60s whose main ask is a motorized mobility scooter, but intake flags a recent asthma/COPD diagnosis and inhaler use.",
+    "parties": 7,
+    "contacts": [
+      "The patient",
+      "Plan Member Services Line"
+    ]
+  },
+  {
+    "case_id": "36acd89e",
+    "title": "Senior meal-program screening and referral",
+    "brief": "You're following up with a man in his 70s in California, enrolled in a Medicare Advantage plan, who was referred to you after a phone intake flagged multiple needs \u2014 including that he's struggling financially to afford groceries and is experiencing food insecurity.",
+    "parties": 6,
+    "contacts": [
+      "Harold M. Prentiss",
+      "Alta Mesa County Aging & Adult Services Resource Line"
+    ]
+  },
+  {
+    "case_id": "072bac71",
+    "title": "Subsidized-Housing Navigation for an Under-62 Dual-Eligible Client",
+    "brief": "You are advocating for a woman in her 40s, dual-eligible for Medicare/Medi-Cal, managing behavioral-health and musculoskeletal conditions while facing housing instability, food insecurity, transportation barriers, and financial strain.",
+    "parties": 9,
+    "contacts": [
+      "The client",
+      "Statewide Subsidized-Housing Resource Locator",
+      "Health Plan Member & ECM Services Line"
+    ]
+  },
+  {
+    "case_id": "539f05bf",
+    "title": "Utility Bill Relief Navigation for a Dual-Eligible Household",
+    "brief": "You're supporting a dual-eligible (Medi-Cal/Medicare) man in his 50s in California who has a spinal cord injury with significant mobility limitation, a history of blood clots in his legs and lungs, and diabetes. His household reports financial strain affecting food, medications, and utilities.",
+    "parties": 10,
+    "contacts": [
+      "Spouse / IHSS Caregiver",
+      "California Energy Assistance Locator Line",
+      "Care Advocacy Program (case file)"
+    ]
+  },
+  {
+    "case_id": "7f263e58",
+    "title": "Welcome Call: Establishing Reliable Contact with a Number-Screening Medicaid Member",
+    "brief": "You've been assigned as healthcare advocate to a 60-69 year old male Medicaid member in Ohio for a welcome call to begin advocacy services. Intake notes that the team has tried phoning him several times with no success, and that he tends to screen and decline calls from unfamiliar numbers.",
+    "parties": 5,
+    "contacts": [
+      "Marcus Delgado (member)",
+      "Hearthstone Care Advocates \u2014 advocate desk / referral record",
+      "Buckeye Community Health Plan \u2014 Member Services",
+      "TrustCaller Verified Caller-ID Registry",
+      "Meridian Telephonic Outreach"
+    ]
+  },
+  {
+    "case_id": "044dbb87",
+    "title": "Welcome/Onboarding Call \u2014 Screening Patient, Scooter DME Coordination",
+    "brief": "You are a care advocate for a Medicaid health plan in Ohio, assigned to make the welcome/onboarding call to a male member in his 60s. He's known to screen calls from unknown numbers, so getting through and building rapport matters.",
+    "parties": 6,
+    "contacts": [
+      "Harold Kessler",
+      "Buckeye Care Advocacy Program",
+      "Scioto Valley Medicaid Plan \u2014 Member Services / Provider Directory",
+      "MobilityPlus Medical Supply (Retail Scooter Showroom)",
+      "Ohio Medicaid Provider Finder (Public Directory Website & Helpline)",
+      "Franklin County Community Assistance Network (Food & Utility Aid)"
+    ]
+  }
+]

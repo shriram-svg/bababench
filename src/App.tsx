@@ -7,7 +7,7 @@ import postSource from "./content/post.md?raw";
 import { Leaderboard, TradeoffChart, OutcomeChart } from "./components/Results";
 import { TranslatorFigure } from "./components/TranslatorFigure";
 
-const REPO = "https://github.com/baba-care/bababench";
+const REPO = "https://github.com/shriram-svg/bababench";
 
 /* The article text lives in src/content/post.md (edit it with `pnpm post`).
    It is parsed once at module load so the SSR prerender stays deterministic. */
@@ -976,9 +976,6 @@ export default function App() {
         <footer className="docFooter">
           <span>BabaBench</span>
           <span>Baba Research</span>
-          <a href={REPO} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
           <a href="#intro">Back to top</a>
           <ShareLinks className="share shareFooter" />
         </footer>

@@ -2,7 +2,9 @@
 
 The standalone BabaBench blog and interactive results site.
 
-[Read the blog](https://baba-care.github.io/bababench/).
+[Read the blog](https://shriram-svg.github.io/bababench/).
+
+The source repository is private. The deployed blog is public.
 
 ## Local use
 
@@ -32,7 +34,7 @@ The local editor is available only through the development server.
 ## Build and publish
 
 ```sh
-SITE_URL=https://baba-care.github.io/bababench/ pnpm build
+SITE_URL=https://shriram-svg.github.io/bababench/ pnpm build
 pnpm preview
 ```
 

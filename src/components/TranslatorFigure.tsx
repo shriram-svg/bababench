@@ -10,8 +10,7 @@ export function TranslatorFigure() {
   return (
     <figure className="translatorFigure resultsWide" aria-labelledby="translator-title">
       <div className="translationHeading">
-        <h4 id="translator-title">From a request to a reply</h4>
-        <span>Luna translation</span>
+        <h4 id="translator-title">Translator architecture</h4>
       </div>
 
       <div className="translationFlow">

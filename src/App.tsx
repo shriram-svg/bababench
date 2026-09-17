@@ -7,7 +7,7 @@ import postSource from "./content/post.md?raw";
 import { Leaderboard, TradeoffChart, OutcomeChart } from "./components/Results";
 import { TranslatorFigure } from "./components/TranslatorFigure";
 
-const REPO = "https://github.com/Shriram-Vasudevan/bababench";
+const REPO = "https://github.com/baba-care/bababench";
 
 /* The article text lives in src/content/post.md (edit it with `pnpm post`).
    It is parsed once at module load so the SSR prerender stays deterministic. */
